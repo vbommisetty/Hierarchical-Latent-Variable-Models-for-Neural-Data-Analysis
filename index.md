@@ -34,6 +34,8 @@ We used data from the **International Brain Laboratory (IBL)**, one of the large
     </iframe>
 </div>
 
+*Courtesy of the International Brain Lab (IBL). [https://viz.internationalbrainlab.org/](https://viz.internationalbrainlab.org/)*
+
 ---
 
 ## Methods:
