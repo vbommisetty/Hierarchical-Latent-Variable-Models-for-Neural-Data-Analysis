@@ -25,6 +25,15 @@ Mice were trained to perform a visual decision-making task. They were shown visu
 ### Data:
 We used data from the **International Brain Laboratory (IBL)**, one of the largest collections of neural recordings in neuroscience. The dataset includes recordings from 139 mice, with activity from over 600,000 neural units captured using advanced **Neuropixels probes**. These probes allow us to measure the activity of hundreds of neurons simultaneously, providing a detailed view of how different brain regions work together.
 
+<div style="width: 100%; height: 700px; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; margin: 20px 0;">
+    <iframe 
+        src="https://viz.internationalbrainlab.org/app?dset=bwm&pid=c4f6665f-8be5-476b-a6e8-d81eeae9279d&tid=0&cid=-1&qc=0&spikesorting=ss_original" 
+        style="width: 100%; height: 100%; border: none;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" 
+        allowfullscreen>
+    </iframe>
+</div>
+
 ---
 
 ## Methods:
