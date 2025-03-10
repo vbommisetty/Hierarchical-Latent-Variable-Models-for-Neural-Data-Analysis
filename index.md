@@ -17,12 +17,12 @@ Decision-making is a fundamental part of life, from choosing what to eat to maki
 
 <style>
   .brain-map {
-    max-width: 600px;
+    max-width: 500px;
     display: block;
     margin: auto;
   }
   .region {
-    fill-opacity: 0.6;
+    fill-opacity: 0.7;
     cursor: pointer;
     transition: fill-opacity 0.2s ease-in-out;
   }
@@ -44,14 +44,17 @@ Decision-making is a fundamental part of life, from choosing what to eat to maki
 <svg class="brain-map" viewBox="0 0 600 400">
   <!-- Background brain shape -->
   <path d="M100,150 C200,50 400,50 500,150 C550,250 400,350 300,350 C200,350 50,250 100,150"
-    fill="#ccc" stroke="black" stroke-width="2"></path>
+    fill="#d0d0d0" stroke="black" stroke-width="2"></path>
 
-  <!-- Superior Colliculus Deep Gray Layer (SCdg) -->
-  <path class="region" d="M250,200 C280,180 320,180 350,200 C340,220 260,220 250,200"
+  <!-- Superior Colliculus Full Structure -->
+  <ellipse cx="300" cy="200" rx="120" ry="50" fill="gray" stroke="black" stroke-width="1.5"></ellipse>
+
+  <!-- Superior Colliculus Deep Gray Layer (SCdg) - More anatomically detailed -->
+  <path class="region" d="M230,190 C250,170 350,170 370,190 C350,210 250,210 230,190"
     fill="blue" data-name="Superior Colliculus Deep Gray Layer (SCdg)"></path>
 
   <!-- Superior Colliculus Intermediate White Layer (SCiw) -->
-  <path class="region" d="M250,220 C280,200 320,200 350,220 C340,240 260,240 250,220"
+  <path class="region" d="M235,210 C255,190 345,190 365,210 C345,230 255,230 235,210"
     fill="yellow" data-name="Superior Colliculus Intermediate White Layer (SCiw)"></path>
 </svg>
 
