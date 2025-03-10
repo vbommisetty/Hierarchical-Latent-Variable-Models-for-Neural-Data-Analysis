@@ -15,7 +15,65 @@ How does the brain make decisions? This project dives into the neural mechanisms
 ## Introduction:
 Decision-making is a fundamental part of life, from choosing what to eat to making complex decisions at work. But how does the brain make these decisions? To answer this, we study the **superior colliculus (SC)**, a brain region involved in processing sensory information and guiding actions. Specifically, we focus on two subregions of the SC—**SCdg** and **SCiw**—which play key roles in integrating sensory inputs and generating motor outputs. By analyzing neural activity in these regions, we aim to uncover how the brain encodes decision-making processes.
 
+<style>
+  .brain-map {
+    max-width: 600px;
+    display: block;
+    margin: auto;
+  }
+  .region {
+    fill-opacity: 0.6;
+    cursor: pointer;
+    transition: fill-opacity 0.2s ease-in-out;
+  }
+  .region:hover {
+    fill-opacity: 1;
+  }
+  .tooltip {
+    position: absolute;
+    background: white;
+    padding: 5px;
+    border: 1px solid black;
+    display: none;
+    font-size: 14px;
+  }
+</style>
 
+<div id="tooltip" class="tooltip"></div>
+
+<svg class="brain-map" viewBox="0 0 600 400">
+  <!-- Background brain shape -->
+  <path d="M100,150 C200,50 400,50 500,150 C550,250 400,350 300,350 C200,350 50,250 100,150"
+    fill="#ccc" stroke="black" stroke-width="2"></path>
+
+  <!-- Superior Colliculus Deep Gray Layer (SCdg) -->
+  <path class="region" d="M250,200 C280,180 320,180 350,200 C340,220 260,220 250,200"
+    fill="blue" data-name="Superior Colliculus Deep Gray Layer (SCdg)"></path>
+
+  <!-- Superior Colliculus Intermediate White Layer (SCiw) -->
+  <path class="region" d="M250,220 C280,200 320,200 350,220 C340,240 260,240 250,220"
+    fill="yellow" data-name="Superior Colliculus Intermediate White Layer (SCiw)"></path>
+</svg>
+
+<script>
+  const tooltip = document.getElementById("tooltip");
+
+  document.querySelectorAll(".region").forEach(region => {
+    region.addEventListener("mouseenter", (e) => {
+      tooltip.innerText = e.target.dataset.name;
+      tooltip.style.display = "block";
+    });
+
+    region.addEventListener("mousemove", (e) => {
+      tooltip.style.left = e.pageX + 10 + "px";
+      tooltip.style.top = e.pageY + 10 + "px";
+    });
+
+    region.addEventListener("mouseleave", () => {
+      tooltip.style.display = "none";
+    });
+  });
+</script>
 
 ---
 
@@ -48,9 +106,7 @@ To analyze the data, we used a combination of statistical and machine learning t
 
 1. **Sensitive Cluster Identification:** We identified neurons that respond strongly to specific events, such as the appearance of a visual stimulus or the start of a movement. This was done using **permutation testing**, a method that compares observed neural responses to random shuffles of the data to determine significance.
 
-
-
-3. **Latent Variable Modeling:** We used **Probabilistic Canonical Correlation Analysis (PCCA)** to uncover hidden patterns in the neural data. PCCA is a statistical method that identifies shared variability between different sets of data, allowing us to model how neural activity relates to behavior.
+2. **Latent Variable Modeling:** We used **Probabilistic Canonical Correlation Analysis (PCCA)** to uncover hidden patterns in the neural data. PCCA is a statistical method that identifies shared variability between different sets of data, allowing us to model how neural activity relates to behavior.
 ---
 
 ## Results and Conclusion:
