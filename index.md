@@ -46,8 +46,8 @@ The frame below allows you to explore the different probes and even view a video
 ## Methods:
 To analyze the data, we used a combination of statistical and machine learning techniques:
 
-1. Sensitive Cluster Identification: We identified neurons that respond strongly to specific events, such as the appearance of a visual stimulus or the start of a movement. This was done using permutation testing, a method that compares observed neural responses to random shuffles of the data to determine significance.
-2. Latent Variable Modeling: We used Probabilistic Canonical Correlation Analysis (PCCA) to uncover hidden patterns in the neural data. PCCA is a statistical method that identifies shared variability between different sets of data, allowing us to model how neural activity relates to behavior.
+1. **Sensitive Cluster Identification:** We identified neurons that respond strongly to specific events, such as the appearance of a visual stimulus or the start of a movement. This was done using permutation testing, a method that compares observed neural responses to random shuffles of the data to determine significance.
+2. **Latent Variable Modeling:** We used Probabilistic Canonical Correlation Analysis (PCCA) to uncover hidden patterns in the neural data. PCCA is a statistical method that identifies shared variability between different sets of data, allowing us to model how neural activity relates to behavior.
 
 
 ---
