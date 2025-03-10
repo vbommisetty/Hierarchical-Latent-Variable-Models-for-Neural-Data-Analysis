@@ -15,68 +15,7 @@ How does the brain make decisions? This project dives into the neural mechanisms
 ## Introduction:
 Decision-making is a fundamental part of life, from choosing what to eat to making complex decisions at work. But how does the brain make these decisions? To answer this, we study the **superior colliculus (SC)**, a brain region involved in processing sensory information and guiding actions. Specifically, we focus on two subregions of the SC—**SCdg** and **SCiw**—which play key roles in integrating sensory inputs and generating motor outputs. By analyzing neural activity in these regions, we aim to uncover how the brain encodes decision-making processes.
 
-<style>
-  .brain-map {
-    max-width: 500px;
-    display: block;
-    margin: auto;
-  }
-  .region {
-    fill-opacity: 0.7;
-    cursor: pointer;
-    transition: fill-opacity 0.2s ease-in-out;
-  }
-  .region:hover {
-    fill-opacity: 1;
-  }
-  .tooltip {
-    position: absolute;
-    background: white;
-    padding: 5px;
-    border: 1px solid black;
-    display: none;
-    font-size: 14px;
-  }
-</style>
-
-<div id="tooltip" class="tooltip"></div>
-
-<svg class="brain-map" viewBox="0 0 600 400">
-  <!-- Background brain shape -->
-  <path d="M100,150 C200,50 400,50 500,150 C550,250 400,350 300,350 C200,350 50,250 100,150"
-    fill="#d0d0d0" stroke="black" stroke-width="2"></path>
-
-  <!-- Superior Colliculus Full Structure -->
-  <ellipse cx="300" cy="200" rx="120" ry="50" fill="gray" stroke="black" stroke-width="1.5"></ellipse>
-
-  <!-- Superior Colliculus Deep Gray Layer (SCdg) - More anatomically detailed -->
-  <path class="region" d="M230,190 C250,170 350,170 370,190 C350,210 250,210 230,190"
-    fill="blue" data-name="Superior Colliculus Deep Gray Layer (SCdg)"></path>
-
-  <!-- Superior Colliculus Intermediate White Layer (SCiw) -->
-  <path class="region" d="M235,210 C255,190 345,190 365,210 C345,230 255,230 235,210"
-    fill="yellow" data-name="Superior Colliculus Intermediate White Layer (SCiw)"></path>
-</svg>
-
-<script>
-  const tooltip = document.getElementById("tooltip");
-
-  document.querySelectorAll(".region").forEach(region => {
-    region.addEventListener("mouseenter", (e) => {
-      tooltip.innerText = e.target.dataset.name;
-      tooltip.style.display = "block";
-    });
-
-    region.addEventListener("mousemove", (e) => {
-      tooltip.style.left = e.pageX + 10 + "px";
-      tooltip.style.top = e.pageY + 10 + "px";
-    });
-
-    region.addEventListener("mouseleave", () => {
-      tooltip.style.display = "none";
-    });
-  });
-</script>
+[Anatomist90](images/Superior Colliculus Slide5ff.jpeg)
 
 ---
 
