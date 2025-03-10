@@ -53,7 +53,7 @@ Gold, Joshua I., and Michael N. Shadlen. 2007. “The Neural Basis of Decision M
 
 Krauzlis, Richard J., Lee P. Lovejoy, and Alexandre Zénon. 2013. “Superior Colliculus and Visual Spatial Attention.” Annual Review of Neuroscience 36: 165–182.
 
-
+By Anatomist90 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=19132821
 
 Sha Lei, Courtney Cheung, Shuyu Wang, and Yutian Shi 2024. "Hierarchial Latent Variable Models for Neural Data Analysis"
 https://github.com/courtneyacheung/Hierarchical-Latent-Variable-Models-for-Neural-Data-Analysis/tree/main
