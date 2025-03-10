@@ -55,6 +55,16 @@ To analyze the data, we used a combination of statistical and machine learning t
 ---
 
 ## Results and Conclusion:
+
+### Plots:
+<div style="display: flex; overflow-x: auto; white-space: nowrap; border: 1px solid #ddd; padding: 10px;">
+  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_all.png" height="150px">
+  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_correct-incorrect.png" height="150px">
+  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_left-right.png" height="150px">
+    <img src="results/PCCA Reconstruction Error.png" height="150px">
+  <img src="results/PCCA Reconstruction Error.png" height="150px">
+</div>
+### Conclusion:
 Our analysis revealed distinct patterns of neural activity in the SCdg and SCiw regions during decision-making. For example, certain neurons responded more strongly to visual stimuli on the left versus the right, while others were more active during correct versus incorrect choices. Using PCCA, we were able to identify shared patterns of activity that correspond to specific behaviors, such as turning the wheel or receiving feedback.
 
 However, our results also highlighted some limitations. While PCCA is effective at capturing linear relationships, it struggles with more complex, nonlinear dynamics. This is where methods like GPFA could be more powerful, as they can model smooth, time-varying patterns in neural activity.
