@@ -48,22 +48,76 @@ To analyze the data, we used a combination of statistical and machine learning t
 
 1. **Sensitive Cluster Identification:** We identified neurons that respond strongly to specific events, such as the appearance of a visual stimulus or the start of a movement. This was done using **permutation testing**, a method that compares observed neural responses to random shuffles of the data to determine significance.
 
-2. **Latent Variable Modeling:** We used **Probabilistic Canonical Correlation Analysis (PCCA)** to uncover hidden patterns in the neural data. PCCA is a statistical method that identifies shared variability between different sets of data, allowing us to model how neural activity relates to behavior.
 
-3. **Gaussian Process Factor Analysis (GPFA):** To capture more complex, nonlinear relationships in the data, we explored **GPFA**, a method that models neural activity as a combination of latent variables that evolve smoothly over time.
 
+3. **Latent Variable Modeling:** We used **Probabilistic Canonical Correlation Analysis (PCCA)** to uncover hidden patterns in the neural data. PCCA is a statistical method that identifies shared variability between different sets of data, allowing us to model how neural activity relates to behavior.
 ---
 
 ## Results and Conclusion:
 
 ### Plots:
-<div style="display: flex; overflow-x: auto; white-space: nowrap; border: 1px solid #ddd; padding: 10px;">
-  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_all.png" height="150px">
-  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_correct-incorrect.png" height="150px">
-  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_left-right.png" height="150px">
-    <img src="results/Stim - Cluster 270.png" height="150px">
-  <img src="results/PCCA Reconstruction Error.png" height="150px">
+<style>
+  .gallery img {
+    height: 150px;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+  }
+  .modal img {
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .modal-close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+
+<div class="gallery">
+  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_all.png" onclick="openModal(this.src)">
+  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_correct-incorrect.png" onclick="openModal(this.src)">
+  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_left-right.png" onclick="openModal(this.src)">
+  <img src="results/Stim - Cluster 270.png" onclick="openModal(this.src)">
+  <img src="results/PCCA Reconstruction Error.png" onclick="openModal(this.src)">
 </div>
+
+<div id="modal" class="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <img id="modal-image">
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal-image").src = src;
+  }
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
 ### Conclusion:
 Our analysis revealed distinct patterns of neural activity in the SCdg and SCiw regions during decision-making. For example, certain neurons responded more strongly to visual stimuli on the left versus the right, while others were more active during correct versus incorrect choices. Using PCCA, we were able to identify shared patterns of activity that correspond to specific behaviors, such as turning the wheel or receiving feedback.
 
