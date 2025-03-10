@@ -61,7 +61,7 @@ To analyze the data, we used a combination of statistical and machine learning t
   <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_all.png" height="150px">
   <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_correct-incorrect.png" height="150px">
   <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_left-right.png" height="150px">
-    <img src="results/PCCA Reconstruction Error.png" height="150px">
+    <img src="results/Stim - Cluster 270.png" height="150px">
   <img src="results/PCCA Reconstruction Error.png" height="150px">
 </div>
 ### Conclusion:
