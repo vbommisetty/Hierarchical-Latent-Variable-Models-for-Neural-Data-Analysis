@@ -15,6 +15,8 @@ How does the brain make decisions? This project dives into the neural mechanisms
 ## Introduction:
 Decision-making is a fundamental part of life, from choosing what to eat to making complex decisions at work. But how does the brain make these decisions? To answer this, we study the **superior colliculus (SC)**, a brain region involved in processing sensory information and guiding actions. Specifically, we focus on two subregions of the SC—**SCdg** and **SCiw**—which play key roles in integrating sensory inputs and generating motor outputs. By analyzing neural activity in these regions, we aim to uncover how the brain encodes decision-making processes.
 
+
+
 ---
 
 ## Background:
@@ -25,9 +27,12 @@ Mice were trained to perform a visual decision-making task. They were shown visu
 ### Data:
 We used data from the **International Brain Laboratory (IBL)**, one of the largest collections of neural recordings in neuroscience. The dataset includes recordings from 139 mice, with activity from over 600,000 neural units captured using advanced **Neuropixels probes**. These probes allow us to measure the activity of hundreds of neurons simultaneously, providing a detailed view of how different brain regions work together.
 
+### Interactive Data Exploration:
+The frame below allows you to explore the different probes and even view a video of the trials. The probe that is currently selected is the probe that gathered data for the SCdg brain region.
+
 <div style="width: 100%; height: 700px; border: 1px solid #ddd; border-radius: 5px; overflow: hidden; margin: 20px 0;">
     <iframe 
-        src="https://viz.internationalbrainlab.org/app?dset=bwm&pid=c4f6665f-8be5-476b-a6e8-d81eeae9279d&tid=0&cid=-1&qc=0&spikesorting=ss_original" 
+        src="https://viz.internationalbrainlab.org/app?dset=bwm&pid=069c2674-80b0-44b4-a3d9-28337512967f&tid=0&cid=-1&qc=0&spikesorting=ss_original" 
         style="width: 100%; height: 100%; border: none;"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" 
         allowfullscreen>
