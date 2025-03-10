@@ -1,0 +1,8 @@
+numpy>=1.21.0
+matplotlib>=3.4.0
+statsmodels>=0.12.0
+ibllib
+brainbox
+iblatlas
+ONE-api
+scikit-learn>=0.24.0
