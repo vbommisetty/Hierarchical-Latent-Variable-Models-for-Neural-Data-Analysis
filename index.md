@@ -1,8 +1,7 @@
 # Hierarchical Latent Variable Models for Neural Data Analysis
 
 ## Authors:
-- **Vaibhav Bommisetty** (vbommisetty@ucsd.edu)  
-- **Beomseuk Seo** (bseo@ucsd.edu)  
+- **Vaibhav Bommisetty** (vbommisetty@ucsd.edu) 
 - **Mentor: Mikio Aoi** (maoi@ucsd.edu)  
 
 ---
