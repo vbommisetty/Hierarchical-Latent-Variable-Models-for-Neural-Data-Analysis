@@ -25,7 +25,7 @@ Decision-making is a fundamental part of life, from choosing what to eat to maki
   </iframe>
 </div>
 <p style="font-size: 0.9em; text-align: center; margin-top: 5px;">
-  <em>Image: Sagittal view of the human brain highlighting the superior colliculus. Credit: Anatomist90. While this project uses mouse data, the SC is a conserved structure across mammals.</em>
+  <em>Image: Sagittal view of the human brain highlighting the superior colliculus. While this project uses mouse data, the SC is a conserved structure across mammals. Credit: Anatomist90.</em>
 </p>
 
 ---
