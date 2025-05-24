@@ -66,6 +66,187 @@ To analyze the data, we used a combination of statistical and machine learning t
 ## Results and Conclusion:
 
 ### Plots:
+
+<!-- START OF CARUSEL -->
+
+<div class="carousel-container">
+    <div class="carousel-slide fade">
+        <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_all.png" alt="Cluster 328 All Trials">
+        <div class="carousel-caption">
+            Neural activity of Cluster 328 across all trials.
+            </div>
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_correct-incorrect.png" alt="Cluster 328 Correct vs Incorrect">
+        <div class="carousel-caption">
+            Cluster 328 activity: comparing correct vs. incorrect trials.
+            </div>
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_left-right.png" alt="Cluster 328 Left vs Right Stimulus">
+        <div class="carousel-caption">
+            Cluster 328 activity: comparing responses to left vs. right stimuli.
+            </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="dots-container" style="text-align:center">
+        <span class="dot" onclick="currentSlideDisplay(1)"></span>
+        <span class="dot" onclick="currentSlideDisplay(2)"></span>
+        <span class="dot" onclick="currentSlideDisplay(3)"></span>
+    </div>
+</div>
+
+<style>
+.carousel-container {
+    position: relative;
+    max-width: 700px; /* Adjust overall width of the carousel */
+    margin: 20px auto; /* Centers the carousel */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden; /* Ensures content stays within rounded borders */
+    background-color: #f9f9f9; /* Light background for the carousel area */
+}
+
+.carousel-slide {
+    display: none; /* Hide all slides by default */
+    padding: 10px; /* Add some padding around the image and caption */
+    text-align: center; /* Center the image and caption within the slide */
+}
+
+.carousel-slide img {
+    max-width: 100%; /* Make images responsive */
+    height: auto;   /* Maintain aspect ratio */
+    max-height: 450px; /* Maximum height for images to keep carousel size reasonable */
+    border-radius: 4px; /* Slightly rounded corners for images */
+    margin-bottom: 10px; /* Space between image and caption */
+}
+
+.carousel-caption {
+    font-size: 1em; /* Readable caption size */
+    color: #333;    /* Dark grey text color */
+    padding: 5px 0;
+    line-height: 1.4;
+}
+
+/* Fade animation */
+.fade {
+    animation-name: fadeEffect;
+    animation-duration: 0.8s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -25px; /* Adjust to vertically center with image height */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Dots styling */
+.dots-container {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1; /* Slight background for dot area */
+}
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+</style>
+
+<script>
+let slideIndex = 1;
+
+// Function to display slides
+function showSlides(n) {
+    let i;
+    // Ensure we are selecting elements only within this specific carousel
+    let slides = document.querySelectorAll(".carousel-container .carousel-slide");
+    let dots = document.querySelectorAll(".carousel-container .dot");
+
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display = "block";
+    if (dots.length > 0 && dots[slideIndex-1]) { // Check if dots exist
+        dots[slideIndex-1].className += " active";
+    }
+}
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls (renamed to avoid conflict if you have other currentSlide functions)
+function currentSlideDisplay(n) {
+    showSlides(slideIndex = n);
+}
+
+// Initialize the carousel
+// We need to ensure the DOM is loaded before trying to show slides,
+// especially if this script is in the <head>. If it's at the end
+// of the body, this is less critical but good practice.
+document.addEventListener('DOMContentLoaded', function() {
+    showSlides(slideIndex);
+});
+
+// If you are placing this script tag right before your closing </body> tag,
+// you could also just call showSlides(slideIndex); directly without the
+// DOMContentLoaded listener, but the listener is more robust.
+</script>
+
+
+<!-- END OF CARUSEL -->
+
+
+
 <style>
   .gallery img {
     height: 150px;
