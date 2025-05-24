@@ -104,36 +104,35 @@ To analyze the data, we used a combination of statistical and machine learning t
 <style>
 .carousel-container {
     position: relative;
-    max-width: 700px; /* Adjust overall width of the carousel */
-    margin: 20px auto; /* Centers the carousel */
+    max-width: 700px; 
+    margin: 20px auto; 
     border: 1px solid #ddd;
     border-radius: 5px;
-    overflow: hidden; /* Ensures content stays within rounded borders */
-    background-color: #f9f9f9; /* Light background for the carousel area */
+    overflow: hidden;
+    background-color: #f9f9f9; 
 }
 
 .carousel-slide {
-    display: none; /* Hide all slides by default */
-    padding: 10px; /* Add some padding around the image and caption */
-    text-align: center; /* Center the image and caption within the slide */
+    display: none;
+    padding: 10px;
+    text-align: center;
 }
 
 .carousel-slide img {
-    max-width: 100%; /* Make images responsive */
-    height: auto;   /* Maintain aspect ratio */
-    max-height: 450px; /* Maximum height for images to keep carousel size reasonable */
-    border-radius: 4px; /* Slightly rounded corners for images */
-    margin-bottom: 10px; /* Space between image and caption */
+    max-width: 100%; 
+    height: auto;  
+    max-height: 450px; 
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .carousel-caption {
-    font-size: 1em; /* Readable caption size */
-    color: #333;    /* Dark grey text color */
+    font-size: 1em;
+    color: #333; 
     padding: 5px 0;
     line-height: 1.4;
 }
 
-/* Fade animation */
 .fade {
     animation-name: fadeEffect;
     animation-duration: 0.8s;
@@ -144,14 +143,13 @@ To analyze the data, we used a combination of statistical and machine learning t
     to {opacity: 1}
 }
 
-/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     padding: 16px;
-    margin-top: -25px; /* Adjust to vertically center with image height */
+    margin-top: -25px;
     color: white;
     font-weight: bold;
     font-size: 20px;
@@ -170,11 +168,10 @@ To analyze the data, we used a combination of statistical and machine learning t
     background-color: rgba(0,0,0,0.7);
 }
 
-/* Dots styling */
 .dots-container {
     text-align: center;
     padding: 10px 0;
-    background-color: #f1f1f1; /* Slight background for dot area */
+    background-color: #f1f1f1;
 }
 
 .dot {
@@ -196,10 +193,8 @@ To analyze the data, we used a combination of statistical and machine learning t
 <script>
 let slideIndex = 1;
 
-// Function to display slides
 function showSlides(n) {
     let i;
-    // Ensure we are selecting elements only within this specific carousel
     let slides = document.querySelectorAll(".carousel-container .carousel-slide");
     let dots = document.querySelectorAll(".carousel-container .dot");
 
@@ -214,101 +209,30 @@ function showSlides(n) {
     }
 
     slides[slideIndex-1].style.display = "block";
-    if (dots.length > 0 && dots[slideIndex-1]) { // Check if dots exist
+    if (dots.length > 0 && dots[slideIndex-1]) {
         dots[slideIndex-1].className += " active";
     }
 }
 
-// Next/previous controls
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls (renamed to avoid conflict if you have other currentSlide functions)
 function currentSlideDisplay(n) {
     showSlides(slideIndex = n);
 }
 
-// Initialize the carousel
-// We need to ensure the DOM is loaded before trying to show slides,
-// especially if this script is in the <head>. If it's at the end
-// of the body, this is less critical but good practice.
 document.addEventListener('DOMContentLoaded', function() {
     showSlides(slideIndex);
 });
 
-// If you are placing this script tag right before your closing </body> tag,
-// you could also just call showSlides(slideIndex); directly without the
-// DOMContentLoaded listener, but the listener is more robust.
 </script>
+
+
 
 
 <!-- END OF CARUSEL -->
 
-
-
-<style>
-  .gallery img {
-    height: 150px;
-    margin: 5px;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  .gallery img:hover {
-    transform: scale(1.1);
-  }
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-  }
-  .modal img {
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .modal-close {
-    position: absolute;
-    top: 15px;
-    right: 25px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-  }
-</style>
-
-<div class="gallery">
-  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_all.png" onclick="openModal(this.src)">
-  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_correct-incorrect.png" onclick="openModal(this.src)">
-  <img src="results/PID_3675290c-8134-4598-b924-83edb7940269_Cluster_328_left-right.png" onclick="openModal(this.src)">
-  <img src="results/Stim - Cluster 270.png" onclick="openModal(this.src)">
-  <img src="results/PCCA Reconstruction Error.png" onclick="openModal(this.src)">
-</div>
-
-<div id="modal" class="modal" onclick="closeModal()">
-  <span class="modal-close">&times;</span>
-  <img id="modal-image">
-</div>
-
-<script>
-  function openModal(src) {
-    document.getElementById("modal").style.display = "block";
-    document.getElementById("modal-image").src = src;
-  }
-  function closeModal() {
-    document.getElementById("modal").style.display = "none";
-  }
-</script>
 ### Conclusion:
 Our analysis revealed distinct patterns of neural activity in the SCdg and SCiw regions during decision-making. For example, certain neurons responded more strongly to visual stimuli on the left versus the right, while others were more active during correct versus incorrect choices. Using PCCA, we were able to identify shared patterns of activity that correspond to specific behaviors, such as turning the wheel or receiving feedback.
 
