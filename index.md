@@ -233,6 +233,168 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- END OF CARUSEL -->
 
+<div class="carousel-container" id="carousel2"> <div class="carousel-slide fade">
+        <img src="results/PCCA RMSE from Hierarchical Latent Variable Models.png" alt="PCCA RMSE">
+        <div class="carousel-caption">
+            PCCA Reconstruction Error (RMSE) Analysis.
+            </div>
+    </div>
+
+    <div class="carousel-slide fade">
+        <img src="results/Stim - Cluster 270.png" alt="Stimulus Cluster 270">
+        <div class="carousel-caption">
+            Stimulus-aligned activity for Cluster 270.
+            </div>
+    </div>
+
+    <a class="prev" onclick="plusSlidesCarousel2(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlidesCarousel2(1)">&#10095;</a>
+
+    <div class="dots-container" style="text-align:center">
+        <span class="dot" onclick="currentSlideDisplayCarousel2(1)"></span>
+        <span class="dot" onclick="currentSlideDisplayCarousel2(2)"></span>
+    </div>
+</div>
+
+<style>
+/* Styles for carousel2 (can be shared if identical, or namespaced like this) */
+#carousel2.carousel-container {
+    position: relative;
+    max-width: 700px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+#carousel2 .carousel-slide {
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+#carousel2 .carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    max-height: 450px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#carousel2 .carousel-caption {
+    font-size: 1em;
+    color: #333;
+    padding: 5px 0;
+    line-height: 1.4;
+}
+
+#carousel2 .fade { /* Re-using fadeEffect if defined globally, or define for #carousel2 */
+    animation-name: fadeEffect; /* Assumes fadeEffect is defined from previous carousel, or copy it here */
+    animation-duration: 0.8s;
+}
+
+/* Ensure fadeEffect is defined if not already global */
+/* @keyframes fadeEffect { from {opacity: .4} to {opacity: 1} } */
+
+
+#carousel2 .prev, #carousel2 .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -25px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#carousel2 .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#carousel2 .prev:hover, #carousel2 .next:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+#carousel2 .dots-container {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+}
+
+#carousel2 .dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#carousel2 .active, #carousel2 .dot:hover { /* Note: '.active' might need to be '#carousel2 .active' if dots are specific */
+    background-color: #717171;
+}
+</style>
+
+<script>
+// --- Script for Carousel 2 ---
+// To avoid conflicts if you have multiple carousels on one page,
+// it's best to make the variables and functions specific to this carousel.
+
+let slideIndexCarousel2 = 1;
+
+function showSlidesCarousel2(n) {
+    let i;
+    // Select elements specifically within this carousel (e.g., using an ID)
+    let carouselContainer = document.getElementById("carousel2");
+    if (!carouselContainer) return; // Exit if carousel container not found
+
+    let slides = carouselContainer.querySelectorAll(".carousel-slide");
+    let dots = carouselContainer.querySelectorAll(".dot");
+
+    if (n > slides.length) {slideIndexCarousel2 = 1}
+    if (n < 1) {slideIndexCarousel2 = slides.length}
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndexCarousel2-1].style.display = "block";
+    if (dots.length > 0 && dots[slideIndexCarousel2-1]) {
+        dots[slideIndexCarousel2-1].className += " active";
+    }
+}
+
+function plusSlidesCarousel2(n) {
+    showSlidesCarousel2(slideIndexCarousel2 += n);
+}
+
+function currentSlideDisplayCarousel2(n) {
+    showSlidesCarousel2(slideIndexCarousel2 = n);
+}
+
+// Initialize Carousel 2
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the carousel element exists before trying to initialize
+    if (document.getElementById("carousel2")) {
+        showSlidesCarousel2(slideIndexCarousel2);
+    }
+});
+
+</script>
+
 ### Conclusion:
 Our analysis revealed distinct patterns of neural activity in the SCdg and SCiw regions during decision-making. For example, certain neurons responded more strongly to visual stimuli on the left versus the right, while others were more active during correct versus incorrect choices. Using PCCA, we were able to identify shared patterns of activity that correspond to specific behaviors, such as turning the wheel or receiving feedback.
 
