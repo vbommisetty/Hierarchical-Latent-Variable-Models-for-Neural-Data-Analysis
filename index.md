@@ -14,18 +14,9 @@ How does the brain make decisions? This project dives into the neural mechanisms
 ## Introduction:
 Decision-making is a fundamental part of life, from choosing what to eat to making complex decisions at work. But how does the brain make these decisions? To answer this, we study the **superior colliculus (SC)**, a mid-brain region involved in processing sensory information and guiding actions. Specifically, we focus on two subregions of the SC—**SCdg** and **SCiw**—which play key roles in integrating sensory inputs and generating motor outputs. By analyzing neural activity in these regions, we aim to uncover how the brain encodes decision-making processes.
 
-<div style="width: 80%; max-width: 550px; margin: 20px auto; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
-  <iframe
-    src="images/Superior%20Colliculus%20Slide5ff.jpeg"
-    style="width: 100%; height: 420px; /* Adjust height as needed, or consider aspect-ratio */ border: none;"
-    title="Sagittal view of the human brain highlighting the superior colliculus (Credit: Anatomist90)"
-    loading="lazy">
-    <p>Your browser does not support iframes. View image: <a href="images/Superior%20Colliculus%20Slide5ff.jpeg">Superior Colliculus</a></p>
-  </iframe>
-</div>
-<p style="font-size: 0.9em; text-align: center; margin-top: 5px;">
-  <em>Image: Sagittal view of the human brain highlighting the superior colliculus. While this project uses mouse data, the SC is a conserved structure across mammals. Credit: Anatomist90.</em>
-</p>
+<img src="images/superior%20colliculus.png"
+     alt="[The Superior Colliculus is highlighted in green. Although this image is of a human brain, the superior colliculus is present in all vertebrates, including mice.]"
+     style="max-width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; border: 1px solid #ddd; padding: 5px; border-radius: 4px; margin-top: 15px; margin-bottom: 15px;">
 
 ---
 
