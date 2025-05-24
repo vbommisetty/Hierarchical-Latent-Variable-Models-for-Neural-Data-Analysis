@@ -17,11 +17,11 @@ Decision-making is a fundamental part of life, from choosing what to eat to maki
 
 <div style="width: 80%; max-width: 550px; margin: 20px auto; border: 1px solid #ddd; border-radius: 5px; overflow: hidden;">
   <iframe
-    src="images/Superior_Colliculus_Slide5ff.jpeg"
+    src="images/Superior%20Colliculus%20Slide5ff.jpeg"
     style="width: 100%; height: 420px; /* Adjust height as needed, or consider aspect-ratio */ border: none;"
     title="Sagittal view of the human brain highlighting the superior colliculus (Credit: Anatomist90)"
     loading="lazy">
-    <p>Your browser does not support iframes. View image: <a href="images/Superior_Colliculus_Slide5ff.jpeg">Superior Colliculus</a></p>
+    <p>Your browser does not support iframes. View image: <a href="images/Superior%20Colliculus%20Slide5ff.jpeg">Superior Colliculus</a></p>
   </iframe>
 </div>
 <p style="font-size: 0.9em; text-align: center; margin-top: 5px;">
